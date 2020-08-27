@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/jesusmanuelir/movie-db-finder#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "babel-eslint": "^10.1.0",
+    "bootstrap": "^5.0.0-alpha1",
+    "bootstrap-icons": "^1.0.0-alpha5",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",

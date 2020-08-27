@@ -56,5 +56,8 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html'
     }),
+    new MiniCssExtractPlugin({
+      filename: 'assets/[name].css'
+    }),
   ]
 };
