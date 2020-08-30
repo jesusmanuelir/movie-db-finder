@@ -2,8 +2,16 @@ import React from 'react';
 
 const Main = ( { children } ) => (
   <main>
-    {children}
-</main>
+      <div className="py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+            {children}
+            </div>
+          </div>
+        </div>
+        </div>
+  </main>
 ); 
 
 

@@ -7,14 +7,16 @@ import Banner from '../components/Banner';
 
 const Home = () => {
     return(
-        <Main>
+       
+       <>
                 <Banner/>
                 <Carousel>
                     <MovieItem/>
                     <MovieItem/>
                     <MovieItem/>
                 </Carousel>
-        </Main>
+        </>
+     
 
     );
 };
