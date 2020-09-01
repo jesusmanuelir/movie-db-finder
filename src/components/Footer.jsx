@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => (
-    <footer class="text-muted py-2">
+    <footer class="text-muted py-2 bg-dark">
     <div class="container">
         <p class="float-right mb-1 text-white">
         <a href="#"></a>
