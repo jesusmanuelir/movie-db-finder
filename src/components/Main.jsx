@@ -2,7 +2,7 @@ import React from 'react';
 
 const Main = ( { children } ) => (
   <main>
-      <div className="py-5">
+      <div className="py-5 vh-100">
         <div className="container">
           <div className="row">
             <div className="col-12">

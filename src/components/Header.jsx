@@ -17,15 +17,18 @@ const Header = () => (
             </Link>
           </div>
           <div className="col-8">
-          <div className="input-group">
-            <input type="text" className="form-control" placeholder="Search movies or tv show" aria-label="Search movies or tv show" aria-describedby="button-addon"/>
-            <div className="input-group-append">
-              <button className="btn btn-secondary" type="button" id="button-addon">Search</button>
-            </div>
-          </div>
+
           </div>
           <div className="col-2">
             <ul className="nav float-right">
+                <li className="nav-item">
+                <Link  className="nav-link text-white" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-search margin-icons_header" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                  </svg>
+                  </Link>
+                </li>
                 <li className="nav-item">
                 <Link to="/favorites" className="nav-link text-white">
                   <svg width="20px" height="20px" viewBox="0 0 16 16" className="bi bi-heart margin-icons_header" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -35,11 +38,14 @@ const Header = () => (
                   </Link>
                 </li>
               </ul>
+
           </div>
         </div>
+
       </div>
     </div>
 </header>
+
 );
 
 

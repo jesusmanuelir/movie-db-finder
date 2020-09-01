@@ -1,15 +1,14 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
 import MovieItem from '../components/MovieItem';
-import Main from '../components/Main';
-import Banner from '../components/Banner';
+import Search from '../components/Search';
 
 
 const Home = () => {
     return(
        
        <>
-                <Banner/>
+                <Search/>
                 <Carousel>
                     <MovieItem/>
                     <MovieItem/>
