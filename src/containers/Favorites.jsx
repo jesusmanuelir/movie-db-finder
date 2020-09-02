@@ -5,7 +5,7 @@ import Main from '../components/Main';
 const Favorites = () => {
     return(
         <Main>
-        <h2>Movies Favorites</h2>
+        <h2 className="text-white">Movies Favorites</h2>
         <ul className="list-group">
           <li className="list-group-item d-flex justify-content-between align-items-center">
             Lorem Ipsum 
