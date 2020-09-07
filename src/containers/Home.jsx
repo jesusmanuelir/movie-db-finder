@@ -7,34 +7,31 @@ const { config } = require('../../config');
 
 
 const Home = () => {
-    const [trending, setTrending] = useState([]);
+    const [trendings, setTrendings] = useState([]);
 
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${config.ApiKey}`)
         .then(res => res.json())
-        .then(setTrending)
+        .then(data => setTrendings(data.results))
     },[]);
 
-    console.log(trending.results)
-    return(
-       
+    return (  
        <Main>
-           
                 <Search/>
-                <Carousel>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
-                    <MovieItem/>
+                <Carousel title="Trending">
+                {trendings.map((trending) => {
+                    return trendings.length === 0 ? <h4>Loading...</h4> :(
+                        <MovieItem
+                        poster = {trending.poster_path}
+                        />
+                    );
+                    
+                    })
+                }
                 </Carousel>
         </Main>
-     
-
     );
 };
 
 export default Home;
-
 
