@@ -18,11 +18,12 @@ const Home = () => {
     return (  
        <Main>
                 <Search/>
-                <Carousel title="Trending">
+                <Carousel title="Trending of week">
                 {trendings.map((trending) => {
                     return trendings.length === 0 ? <h4>Loading...</h4> :(
                         <MovieItem
                         poster = {trending.poster_path}
+                        vote_average = {trending.vote_average}
                         />
                     );
                     
@@ -34,4 +35,5 @@ const Home = () => {
 };
 
 export default Home;
+
 

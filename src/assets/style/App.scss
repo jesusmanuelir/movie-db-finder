@@ -17,7 +17,7 @@ header{
 }
 
 .container_bg{
-    background-color: #5D666F2B;
+    background-color: #fff;
 }
 .margin-icons_header{
     margin-right: 8px;
@@ -35,4 +35,33 @@ header{
     background-color: #121b25;
     border-color: #121b25;
     font-weight: 600;
+}
+
+
+
+
+.trending-title_item{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.trending-cut_title{
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.trending-date_item{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+
+.img-trending_zoon{
+    transition: transform .2s;
+}
+
+.img-trending_zoon:hover{
+    transform: scale(1.1);
 }
