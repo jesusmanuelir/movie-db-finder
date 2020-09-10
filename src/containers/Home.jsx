@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Carousel from '../components/Carousel';
 import MovieItem from '../components/MovieItem';
 import Main from '../components/Main';
+import { connect } from 'react-redux';
 const { config } = require('../../config');
 
 
-const Home = () => {
-    const [trendings, setTrendings] = useState([]);
+const Home = ({ trendings }) => {
     const [query, setQuery] = useState('');
     const [searchs, setSearch] = useState([]);
     
@@ -16,14 +16,6 @@ const Home = () => {
     .then(res => res.json())
     .then(data => setSearch(data.results))
     }
-
-    console.log(searchs);
-
-    useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${config.ApiKey}`)
-        .then(res => res.json())
-        .then(data => setTrendings(data.results))
-    },[]);
 
     return (  
        <Main>
@@ -87,7 +79,15 @@ const Home = () => {
     );
 };
 
-export default Home;
+
+const initialStateTrending = state => {
+  return{
+    trendings: state.results,
+  };
+};
+
+export default connect(initialStateTrending, null)(Home)
+
 
 
 
