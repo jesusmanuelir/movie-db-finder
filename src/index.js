@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 import reducer from './reducers';
 
 const initialState = {
-    "page":1,
+    "favorites": [],
     "results":[
        {
           "id":337401,
@@ -425,9 +425,8 @@ const initialState = {
           "popularity":1577.352,
           "media_type":"movie"
        }
-    ],
-    "total_pages":1000,
-    "total_results":20000
+    ]
+
  }
 
 const store = createStore(reducer, initialState);

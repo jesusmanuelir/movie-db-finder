@@ -1,10 +1,15 @@
 import React from 'react';
 import Main from '../components/Main';
+import { connect } from 'react-redux';
 
+const Favorites = ({favorites}) => {
+  const {poster, vote_average} = favorites;
 
-const Favorites = () => {
+  console.log(favorites)
     return(
+
         <Main>
+
         <h2 className="text-white">Movies Favorites</h2>
         <ul className="list-group">
           <li className="list-group-item d-flex justify-content-between align-items-center">
@@ -48,6 +53,13 @@ const Favorites = () => {
     );
 }
 
-export default Favorites;
+const initialStateTrending = state => {
+  return{
+    favorites: state.favorites,
+  };
+};
+
+export default connect(initialStateTrending, null)(Favorites)
+
 
 

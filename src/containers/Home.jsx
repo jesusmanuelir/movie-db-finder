@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 const { config } = require('../../config');
 
 
-const Home = ({ trendings }) => {
+const Home = ({ trendings, favorites }) => {
     const [query, setQuery] = useState('');
     const [searchs, setSearch] = useState([]);
-    
+
     const submit = e => {
     e.preventDefault();
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=${config.ApiKey}&query=${query}&language=en-US&page=1&include_adult=false`)
@@ -63,7 +63,9 @@ const Home = ({ trendings }) => {
       ''
     }
 
-                
+    
+
+    {trendings != null ?         
       <Carousel title="Trending of week">
         {trendings.map((trending) => {
           return trendings.length === 0 ? <h4>Loading...</h4> :(
@@ -75,6 +77,8 @@ const Home = ({ trendings }) => {
           })
         }
       </Carousel>
+      : ''
+      } 
     </Main>
     );
 };
@@ -83,6 +87,7 @@ const Home = ({ trendings }) => {
 const initialStateTrending = state => {
   return{
     trendings: state.results,
+    favorites: state.favorites,
   };
 };
 
