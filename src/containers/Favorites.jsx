@@ -1,54 +1,29 @@
 import React from 'react';
 import Main from '../components/Main';
+import MovieItenFavorites from '../components/MovieItenFavorites'
 import { connect } from 'react-redux';
 
 const Favorites = ({favorites}) => {
-  const {poster, vote_average} = favorites;
+    
 
-  console.log(favorites)
     return(
 
         <Main>
-
-        <h2 className="text-white">Movies Favorites</h2>
+        <h2 className="mb-2">Movies Favorites</h2>
         <ul className="list-group">
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <button type="button" class="btn btn-warning">Delete</button>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <span className="badge badge-danger">2</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <span className="badge badge-danger">1</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <span className="badge badge-danger">1</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <span className="badge badge-danger">1</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <span className="badge badge-danger">1</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <span className="badge badge-danger">1</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <span className="badge badge-danger">1</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center">
-            Lorem Ipsum 
-            <span className="badge badge-danger">1</span>
-          </li>
-          </ul>
+        {favorites.map((favorite) => {
+          console.log(favorites.length)
+          return favorites.length != 0  ?
+                <MovieItenFavorites 
+                key={favorite.id}
+                {...favorite}
+                isList
+                />
+              : <h5 className="mb-2">No results found</h5>
+                
+        })} 
+        </ul>
+        
         </Main>
     );
 }
@@ -59,7 +34,12 @@ const initialStateTrending = state => {
   };
 };
 
-export default connect(initialStateTrending, null)(Favorites)
+
+
+export default connect(initialStateTrending, '')(Favorites)
+
+
+
 
 
 

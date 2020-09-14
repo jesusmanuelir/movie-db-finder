@@ -2,11 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setFavorites } from '../actions';
 const MovieItem = (props) => {
-  const { poster, vote_average } = props;
+  const { id, poster, vote_average, title, description, date } = props;
   const handleSetFavorites = () => {
     props.setFavorites({
+      id,
       poster,
-      vote_average
+      vote_average,
+      date,
+      title,
+      description
     })
   }
 
@@ -38,3 +42,8 @@ const mapDispatchToProps = {
 }
 
 export default connect(null, mapDispatchToProps)(MovieItem);
+
+
+
+
+

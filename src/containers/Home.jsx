@@ -70,8 +70,12 @@ const Home = ({ trendings, favorites }) => {
         {trendings.map((trending) => {
           return trendings.length === 0 ? <h4>Loading...</h4> :(
             <MovieItem
+              id = {trending.id}
               poster = {trending.poster_path}
               vote_average = {trending.vote_average}
+              title = {trending.title}
+              description = {trending.overview}
+              date = {trending.release_date}
               />
               );       
           })
