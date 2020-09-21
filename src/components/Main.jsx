@@ -2,7 +2,7 @@ import React from 'react';
 
 const Main = ( { children } ) => (
   <main>
-      <div className="py-5 container_bg mt-auto">
+      <div className="py-5 mt-auto">
         <div className="container">
           <div className="row">
             <div className="col-12">

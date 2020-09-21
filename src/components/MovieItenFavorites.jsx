@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { deleteFavorites } from '../actions';
 import { connect } from 'react-redux';
 
@@ -18,10 +19,12 @@ const MovieItenFavorites = (props) => {
               </div>
               <div className="col-md-10">
                 <div className="card-body">
-                  <h5 className="card-title">{title}</h5>
-                  <p className="card-text">{description}</p>
-                  <p className="card-text"><small className="text-muted">{date}</small></p>
-                  <button onClick={() => handleDeleteFavorites(id)}>Delete</button>
+                  <h5 className="card-title title-item_favorites">{title}</h5>
+                  <p className="card-text description-item_favorites">{description}</p>
+                  <button className="btn btn-outline-danger btn-sm" onClick={() => handleDeleteFavorites(id)}>Delete</button>&nbsp;
+                  <Link to={`/movie/${id}`}>
+                  <button className="btn btn-outline-primary btn-sm" >View</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -37,9 +40,6 @@ const mapDispatchToProps = {
 }
 
 export default connect('',mapDispatchToProps)(MovieItenFavorites)
-
-
-
 
 
 

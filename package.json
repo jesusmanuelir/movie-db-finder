@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jesusmanuelir/movie-db-finder#readme",
   "dependencies": {
+    "@babel/runtime": "^7.11.2",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "babel-eslint": "^10.1.0",
     "bootstrap": "^5.0.0-alpha1",
@@ -34,10 +35,12 @@
     "react-multi-carousel": "^2.5.5",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
@@ -48,6 +51,7 @@
     "mini-css-extract-plugin": "^0.10.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.3",
+    "svg-url-loader": "^6.0.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"

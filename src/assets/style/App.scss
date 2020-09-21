@@ -69,3 +69,51 @@ header{
 .img-favorites_max_width{
     max-width: 150px;
 }
+
+.contect-banner_movie{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.title-movie{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.overview-movie{
+    font-size: 16px;
+    color: white;
+}
+
+.title-overview{
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 45px;
+}
+
+.style-poster_movie{
+    border-radius: 10px;
+}
+
+.block-imagen_nofound{
+    width: 100%;
+    height: 354px;
+    background: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.title-item_favorites{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.description-item_favorites{
+    font-size: 14px;
+}
+

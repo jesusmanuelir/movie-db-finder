@@ -51,8 +51,12 @@ const Home = ({ trendings, favorites }) => {
          {searchs.map((search) =>{
             return(
              <MovieItem
+             id = {search.id}
              poster = {search.poster_path}
              vote_average = {search.vote_average}
+             title = {search.title}
+             description = {search.overview}
+             date = {search.release_date}
              />
             );
         }
@@ -96,6 +100,9 @@ const initialStateTrending = state => {
 };
 
 export default connect(initialStateTrending, null)(Home)
+
+
+
 
 
 
