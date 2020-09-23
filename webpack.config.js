@@ -2,12 +2,12 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
-
+const port = process.env.PORT || 3000;
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.[hash].js',
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -64,7 +64,10 @@ module.exports = {
     ]
   },
   devServer: {
+    host: 'localhost',
+    port: port,
     historyApiFallback: true,
+    open: true
   },
   node: {
     fs: "empty"

@@ -7,7 +7,6 @@ const Favorites = ({favorites}) => {
     
 
     return(
-
         <Main>
         <h2 className="mb-2">Movies Favorites</h2>
         <ul className="list-group">
