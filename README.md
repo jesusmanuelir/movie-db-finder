@@ -8,7 +8,7 @@ Film information search using [themoviedb](https://www.themoviedb.org/) API
 
 Rename the env_example file to .env 
 
-Generate the KEY API in [themoviedb](https://www.themoviedb.org/) and add it to the .env file
+Generate the API KEY in [themoviedb](https://www.themoviedb.org/) and add it to the .env file
 
 ## Installation
 
