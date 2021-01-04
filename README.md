@@ -25,7 +25,7 @@ You can view the development server at `localhost:3000`.
 ### Production build
 
 ```bash
-$ npm run build
+$ npm build
 ```
 
 
