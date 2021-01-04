@@ -4,4 +4,6 @@
 **/
 
 API_KEY=
-URI=
+URI_IMAGE_ORIGINAL=https://image.tmdb.org/t/p/original
+URI_IMAGEN_500=https://image.tmdb.org/t/p/w500
+URI_SEARCH=https://api.themoviedb.org/3/search/movie?api_key=
